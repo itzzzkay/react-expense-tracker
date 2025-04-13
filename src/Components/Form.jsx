@@ -6,22 +6,37 @@ const Form = () => {
       onSubmit={() => alert("Brian Kiprono is gay")}
     >
       <div>
-        <label for="expense"></label>
-        <input type="text" id="expense" placeholder="" required />
+        <label for="expense">Expense: </label>
+        <input type="text" id="expense" placeholder="Enter expense" required />
         <br />
-        <label for="description"></label>
-        <input type="text" id="description" placeholder="" required />
+        <label for="description">Description:</label>
+        <input
+          type="text"
+          id="description"
+          placeholder="Enter Description"
+          required
+        />
         <br />
-        <label for="category"></label>
-        <input type="text" id="category" placeholder="" required />
+        <label for="category">Category:</label>
+        <input
+          type="text"
+          id="category"
+          placeholder="Enter Category"
+          required
+        />
         <br />
-        <label for="amount"></label>
-        <input type="quantity" id="amount" placeholder="" required />
+        <label for="amount">Amount:</label>
+        <input
+          type="quantity"
+          id="amount"
+          placeholder="Enter amount"
+          required
+        />
         <br />
-        <label for="date"></label>
-        <input type="date" id="date" placeholder="" required />
+        <label for="date">Date:</label>
+        <input type="date" id="date" placeholder="Enter date" required />
         <br />
-        <input type="submit" required />
+        <input type="submit" />
       </div>
     </form>
   );
