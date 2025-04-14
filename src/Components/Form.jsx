@@ -6,6 +6,10 @@ const Form = () => {
       onSubmit={() => alert("Brian Kiprono is gay")}
     >
       <div>
+        <h1>Add Expense</h1>
+        <h4>Enter your expense details below</h4>
+      </div>
+      <div>
         <label for="expense">Expense: </label>
         <input type="text" id="expense" placeholder="Enter expense" required />
         <br />
