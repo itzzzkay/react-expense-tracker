@@ -1,39 +1,38 @@
-const Table = () => {
+import React from "react";
+
+const Table = ({ inputArray }) => {
   return (
-  <div>
-<table border="2">
-<tr>
-  <th width="400px">Expense</th>
-  <th width="250px">Description</th>
-  <th width="200px">Category</th>
-  <th width="150px">Amount</th>
-  <th width="150px">Date</th>
-</tr>
-<tr>
-<td>Fried Chicken</td>
-<td>From KFC</td>
-<td>Food</td>
-<td>1600shs</td>
-<td>02/20/2025
-</td>
-</tr>
-<tr>
-  <td>Prostitutes</td>
-  <td>From Koinange</td>
-  <td>Leisure</td>
-  <td>150shs</td>
-  <td>04/13/2025</td>
-</tr>
-<tr>
-  <td>Bulletproof</td>
-  <td>From Naivas</td>
-  <td>Leisure</td>
-  <td>49shs</td>
-  <td>03/24/2025</td>
-</tr>
-</table>
-  </div>
-  )
+    <div>
+      <h2>Expense List</h2>
+      {inputArray.length > 0 ? (
+        <table border="1" cellPadding="10">
+          <thead>
+            <tr>
+              <th>Expense</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {inputArray.map((item, index) => (
+              <tr key={index}>
+                <td>{item.expense}</td>
+                <td>{item.description}</td>
+                <td>{item.category}</td>
+                <td>{item.amount}</td>
+                <td>{item.date}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No expenses added yet.</p>
+      )}
+    </div>
+  );
 };
 
 export default Table;
+  
